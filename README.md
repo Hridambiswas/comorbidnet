@@ -10,6 +10,24 @@
 
 ---
 
+## Analysis Graphs
+
+Visualisation scripts are in `graphs/`. Run from the repo root:
+
+```bash
+python graphs/disease_cooccurrence.py   # Co-occurrence heatmap + prevalence by disease
+python graphs/shap_summary.py           # SHAP feature importance per disease label
+python graphs/model_performance.py      # Per-disease precision / recall / F1
+```
+
+| Script | What it shows |
+|---|---|
+| `disease_cooccurrence.py` | Phi-correlation heatmap between T2D/HTN/MetS/CKD + prevalence bar chart |
+| `shap_summary.py` | Grouped bar chart of mean |SHAP| for top-10 clinical features across all diseases |
+| `model_performance.py` | Side-by-side precision/recall/F1 bars + score profile lines per disease |
+
+---
+
 ## The Problem
 
 Standard disease prediction treats each disease independently:
